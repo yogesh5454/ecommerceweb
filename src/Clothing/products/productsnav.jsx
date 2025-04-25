@@ -9,7 +9,7 @@ import { GiSkirt } from "react-icons/gi";
 const Productsnav = () => {
   return (
     <>
-      <div className="flex-col p-8 space-y-6">
+      <div className="flex-col p-8 space-y-6 w-110 mt-5 ">
         <a className="flex  items-center  gap-2" href="">
           <GiAmpleDress /> Women Dress <FaChevronDown/>
         </a>

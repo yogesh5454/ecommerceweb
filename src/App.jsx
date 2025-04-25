@@ -1,7 +1,8 @@
 import "./App.css";
+
 import Nav from "./navbar/nav";
-import Head from "./Heading/head";
-import Output from "./products/output";
+import Head from "./Clothing/Heading/head";
+import Output from "./Clothing/products/output";
 function App() {
   return (
     <>

@@ -1,3 +1,5 @@
+import Productsfun from "./productfun";
+
 const Products = () => {
   const products = [
     {
@@ -9,10 +11,8 @@ const Products = () => {
     },
     {
       id: 2,
-
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F115%2FFOREVER_21.jpg&w=3840&q=75",
-
       clothname: "Forever 21 Solid Bodycon Midi Dress",
       price: "$100",
     },
@@ -51,6 +51,55 @@ const Products = () => {
       clothname: "Narrow Notch Lapel Slit Pocket Plain Blazers",
       price: "$150",
     },
+    {
+      id: 8,
+      imageurl:
+        "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F122%2FNotch_Lapel_Elastic.jpg&w=3840&q=75",
+      clothname: "Notch Lapel Elastic Waist Plain Trench Coat",
+      price: "$85",
+    },
+    {
+      id: 9,
+      imageurl:
+        "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F123%2FTurn_Down.jpg&w=3840&q=75",
+      clothname: "Turn Down Collar Elastic Waist Plain Trench Coat",
+      price: "$100",
+    },
+    {
+      id: 10,
+      imageurl:
+        "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F124%2FCowl_Neck.jpg&w=3840&q=75",
+      clothname: "Cowl Neck Kangaroo Pocket Color Block Hoodie",
+      price: "$75",
+    },
+    {
+      id: 11,
+      imageurl:
+        "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F126%2FHooded_Zips.jpg&w=3840&q=75",
+      clothname: "Hooded Zips Plain Long Sleeve Hoodies",
+      price: "$98",
+    },
   ];
+
+  return <>
+  <div className="bg-gray-100 p-6 ">
+    <div className=" flex flex-wrap  gap-3">
+      {products.map((product) => (
+        <Productsfun
+          key={product.id}
+          id={product.id}
+          imageurl={product.imageurl}
+          clothname={product.clothname}
+          price={product.price}
+        />
+      ))}
+
+     
+    </div>
+<div className="text-center mt-6" ><button className="border border-green-700 bg-green-700 text-white rounded-sm p-3">Load More</button></div>
+    </div>
+    </>
+  
 };
+
 export default Products;

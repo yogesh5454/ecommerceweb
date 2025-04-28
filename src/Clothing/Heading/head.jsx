@@ -1,6 +1,5 @@
 import { CiSearch } from "react-icons/ci";
-import leftimage from "./left.png";
-import rightimage from "./right.png";
+
 const Head = () => {
   return (
     <>

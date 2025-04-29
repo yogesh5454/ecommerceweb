@@ -27,9 +27,9 @@ const Cart = () => {
         onTouchMove={(e) => e.preventDefault()}
         className=" text-white bg-green-700 fixed p-3 top-4 right-0 mt-100 rounded-sm"
       >
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center ">
           <BsFillCartCheckFill />
-          <p>0 Item</p>
+          <p >0 Item</p>
         </div>
         <div>
           <p className="p-1 bg-white text-green-700 rounded-sm">$0.00</p>
@@ -44,17 +44,16 @@ const Cart = () => {
           >
             <div className=" min-h-screen  fixed right-0  bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
               <div className="flex    items-center">
-                <div className="flex items-center gap-4 w-9/10 text-green-700">
+                <div className="flex items-center gap-4 w-9/10 text-green-700 font-semibold">
                   <IoBagCheckSharp /> <p>o items</p>
                 </div>
-                <div className="text-white bg-green-700 p-1 rounded-2xl">
-                  <RxCross1 />
+                <div className="text-white bg-green-700 p-1 rounded-2xl hover:bg-red-700">
+                  <RxCross1  />
                 </div>
               </div>
 
-              <div>
-                <hr className="w-full text-gray-300 my-4" />
-                <div className="flex">
+              <hr className="w-full text-gray-300 my-4" />
+              <div className="flex items-center gap-2">
                 <div className="flex-col space-y-3 bg-gray-300  p-1 px-2 rounded-t-4xl rounded-b-4xl ">
                   <p>+</p>
                   <p>2</p>
@@ -62,22 +61,26 @@ const Cart = () => {
                 </div>
                 <div>
                   <img
+                  className="w-40 h-20"
                     src="        https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F115%2FFOREVER_21.jpg&w=3840&q=75"
                     alt=""
                   />
-                  </div>
-                  <div>
-                    <h1 className="font-bold">Mango Self Striped A Line Dress - Red/M</h1>
-                    <h3 className="font-semibold text-green-700">$70</h3>
-                  </div>
-                  <div>
-                    <p>$180</p>
-                  </div>
-                  <div>
-                    <MdDelete/>
-                  </div>
+                </div>
+                <div>
+                  <h1 className="font-bold">
+                    Mango Self Striped A Line Dress - Red/M
+                  </h1>
+                  <h3 className="font-semibold text-green-700 mt-2">$70</h3>
+                </div>
+                <div>
+                  <p className="font-semibold">$180</p>
+                </div>
+                <div className="ml-3">
+                  <MdDelete className="text-green-700 hover:bg-red-700 hover:text-white"/>
                 </div>
               </div>
+              <hr className="w-full text-gray-300 my-4" />
+
               <button className="flex bg-green-700 p-2 rounded-r-4xl rounded-l-4xl w-85 bottom-4 absolute gap-40 items-center px-6   ">
                 <h2 className="text-white">Checkout</h2>{" "}
                 <h2 className="bg-white text-green p-2 rounded-r-3xl rounded-l-3xl px-5">

@@ -25,7 +25,7 @@ const Productsnav = () => {
         </a>
         <a className="flex items-center gap-2" href="">
           <GiSkirt /> Skirts
-        </a>``
+        </a>
         <a className="flex items-center gap-2" href="">
           <PiShirtFoldedLight />
           Shirts

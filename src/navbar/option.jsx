@@ -11,11 +11,13 @@ import {
   GiTable,
   GiGears,
 } from "react-icons/gi";
+import { useNavigate } from "react-router-dom";
 
 const Option = () => {
+  const navigate = useNavigate();
   const options = [
-    { label: "Clothing", icon: <GiAmpleDress /> },
-    { label: "Grocery", icon: <GiShoppingCart /> },
+    { label: "Clothing", icon: <GiAmpleDress /> , path: "/clothing" },
+    { label: "Grocery", icon: <GiShoppingCart /> , path: "/grocery" },
     { label: "Bakery", icon: <GiCakeSlice /> },
     { label: "Makeup", icon: <GiLipstick /> },
     { label: "Bags", icon: <GiHandBag /> },
@@ -34,6 +36,7 @@ const Option = () => {
   const handleOptionClick = (option) => {
     setSelected(option);
     setIsOpen(false);
+    navigate(option.path); 
   };
 
   return (
@@ -46,6 +49,7 @@ const Option = () => {
         <div className="flex items-center gap-2">
           {selected.icon}
           {selected.label}
+         
         </div>
         <FaSortDown />
       </button>

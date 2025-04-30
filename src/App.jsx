@@ -1,17 +1,24 @@
 import "./App.css";
 
 import Nav from "./navbar/nav";
-import Head from "./Clothing/Heading/head";
-import Output from "./Clothing/products/output";
+import Clothing from "./Clothing/Clothing";
 import Cart from "./cart/cart";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Grocery from "./Grocery/grocery";
+
 function App() {
   return (
-    <>
-      <Nav />
-      <Cart/>
-      <Head />
-      <Output/>
-    </>
+    <BrowserRouter>
+      <Nav /> 
+      <Cart /> 
+        <Routes>
+     
+        <Route path="/" element={<Clothing />} />
+          <Route path="/clothing" element={<Clothing />} />
+          <Route path="/grocery" element={<Grocery />} />
+        </Routes>
+       
+    </BrowserRouter>
   );
 }
 

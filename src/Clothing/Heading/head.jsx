@@ -21,10 +21,7 @@ const Head = () => {
           </button>
         </div>
 
- 
-        <div className="flex justify-between w-full max-w-7xl mx-auto mt-8">
-
-</div>
+        <div className="flex justify-between w-full max-w-7xl mx-auto mt-8"></div>
       </div>
     </>
   );

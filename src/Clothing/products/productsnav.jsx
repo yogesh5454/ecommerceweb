@@ -11,14 +11,14 @@ const Productsnav = () => {
     <>
       <div className="flex-col p-8 space-y-6 w-140 mt-5 ">
         <a className="flex  items-center  gap-2" href="">
-          <GiAmpleDress /> Women Dress <FaChevronDown/>
+          <GiAmpleDress /> Women Dress <FaChevronDown />
         </a>
         <a className="flex items-center gap-2" href="">
-          <IoShirtOutline /> Outer Wear <FaChevronDown/>
+          <IoShirtOutline /> Outer Wear <FaChevronDown />
         </a>
         <a className="flex items-center gap-2" href="">
           <PiPants />
-          Pants <FaChevronDown/>
+          Pants <FaChevronDown />
         </a>
         <a className="flex items-center gap-2" href="">
           <GiTShirt /> Tops

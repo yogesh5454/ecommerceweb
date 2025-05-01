@@ -12,7 +12,7 @@ const Nav = () => {
           <img
             className="w-35 "
             src="https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F2295%2FLogo-new.png&w=3840&q=75"
-            alt=""
+            alt="ecommerce logo"
           />
 <Option/>
 

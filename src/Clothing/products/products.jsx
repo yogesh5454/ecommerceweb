@@ -137,43 +137,55 @@ const Products = () => {
       star: "4",
       categories: ["Clothing", "Outer Wear", "Hoodies"],
       seller: "Pick Bazar",
-    },{
+    },
+    {
       id: 12,
-      imageurl:"https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F127%2FLapel_Zips.jpg&w=3840&q=75",
-      itemname:"Lapel Zips Plain Long Sleeve Jackets",
-      price:"$120",
-      description:"Black bandhgala, has a mandarin collar, a full button placket, long sleeves, three pockets, double vented back hem, and has an attached lining",
-      star:"3.5",
-      categories:["Clothing", "Outer Wear", "hoodies"],
-      seller:"Pick Bazar",
-    },{
+      imageurl:
+        "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F127%2FLapel_Zips.jpg&w=3840&q=75",
+      itemname: "Lapel Zips Plain Long Sleeve Jackets",
+      price: "$120",
+      description:
+        "Black bandhgala, has a mandarin collar, a full button placket, long sleeves, three pockets, double vented back hem, and has an attached lining",
+      star: "3.5",
+      categories: ["Clothing", "Outer Wear", "hoodies"],
+      seller: "Pick Bazar",
+    },
+    {
       id: 13,
-      imageurl:"https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F130%2FBOXY_CARDIGAN.jpg&w=1080&q=75",
-      itemname:"Boxy Cardigan",
-      price:"$150",
-      description:"Black bandhgala, has a mandarin collar, a full button placket, long sleeves, three pockets, double vented back hem, and has an attached lining",
-      star:"4",
-      categories:["Clothing", "Outer Wear", "hoodies"],
-      seller:"Pick Bazar",
-    },{
-      id:14,
-      imageurl:"https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F132%2FSTRETCH_COTTON.jpg&w=3840&q=75",
-      itemname:"Stretch Cotton Utility Jacket With Adjustable Waist",
-      price:"$130",
-      description:"Blue and navy cotton Decima zipped cardigan from ANGLOZINE featuring a classic collar, a front zip fastening, a chest pocket, long sleeves, contrasting panels and a slim fit. This item is unisex.",
-      star:"4.5",
-      categories:["Clothing", "Outer Wear", "hoodies"],
-      seller:"cloth Bazar",
-    },{
-      id:15,
-      imageurl:"https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F134%2FDavid_Jones.jpg&w=1080&q=75",
-      itemname:"David Jones",
-      price:"$140",
-      description:"Black bandhgala, has a mandarin collar, a full button placket, long sleeves, three pockets, double vented back hem, and has an attached lining",
-      star:"4",
-      categories:["Clothing", "Outer Wear", "Blazer"],
-      seller:"Hamro Bazar",
-    }
+      imageurl:
+        "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F130%2FBOXY_CARDIGAN.jpg&w=1080&q=75",
+      itemname: "Boxy Cardigan",
+      price: "$150",
+      description:
+        "Black bandhgala, has a mandarin collar, a full button placket, long sleeves, three pockets, double vented back hem, and has an attached lining",
+      star: "4",
+      categories: ["Clothing", "Outer Wear", "hoodies"],
+      seller: "Pick Bazar",
+    },
+    {
+      id: 14,
+      imageurl:
+        "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F132%2FSTRETCH_COTTON.jpg&w=3840&q=75",
+      itemname: "Stretch Cotton Utility Jacket With Adjustable Waist",
+      price: "$130",
+      description:
+        "Blue and navy cotton Decima zipped cardigan from ANGLOZINE featuring a classic collar, a front zip fastening, a chest pocket, long sleeves, contrasting panels and a slim fit. This item is unisex.",
+      star: "4.5",
+      categories: ["Clothing", "Outer Wear", "hoodies"],
+      seller: "cloth Bazar",
+    },
+    {
+      id: 15,
+      imageurl:
+        "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F134%2FDavid_Jones.jpg&w=1080&q=75",
+      itemname: "David Jones",
+      price: "$140",
+      description:
+        "Black bandhgala, has a mandarin collar, a full button placket, long sleeves, three pockets, double vented back hem, and has an attached lining",
+      star: "4",
+      categories: ["Clothing", "Outer Wear", "Blazer"],
+      seller: "Hamro Bazar",
+    },
   ];
 
   const handleProductClick = (product) => {
@@ -189,7 +201,9 @@ const Products = () => {
       const existingItem = prevItems.find((item) => item.id === product.id);
       if (existingItem) {
         return prevItems.map((item) =>
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
         );
       } else {
         return [...prevItems, { ...product, quantity: 1 }];

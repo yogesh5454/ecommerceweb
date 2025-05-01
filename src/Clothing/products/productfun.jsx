@@ -4,7 +4,11 @@ const Productsfun = ({ id, imageurl, itemname, price, onproductclick }) => {
   return (
     <div className="w-68 bg-white shadow-md rounded-md p-4">
       <div>
-        <img src={imageurl} alt={itemname} className="w-full h-48 object-cover rounded-md" />
+        <img
+          src={imageurl}
+          alt={itemname}
+          className="w-full h-48 object-cover rounded-md"
+        />
       </div>
       <div className="mt-4">
         <p className="text-md font-light px-5">{itemname}</p>

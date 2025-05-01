@@ -14,7 +14,7 @@ import { TbHealthRecognition } from "react-icons/tb";
 const Productnav = () => {
   return (
     <div>
-      <div className="flex-col p-8 space-y-6 w-80 mt-5 ">
+      <div className="flex-col p-8 space-y-6 w-65 mt-5 ">
         <a className="flex  items-center  gap-2" href="">
           <GiFruitBowl /> Fruits & Vegetables <FaChevronDown />
         </a>

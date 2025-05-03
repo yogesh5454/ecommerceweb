@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Productfun from "./productfun";
 import Groceryproductpop from "./Groceryproductpop";
-import Cart from "../../cart/cart";
-
+import { useCart } from "../../context/CartContext";
 const Products = () => {
   const [selectproduct, setselectproduct] = useState(null);
-  const [cartItems, setcartItems] = useState([]);
+  const { addToCart } = useCart();
+
   const products = [
     {
-      id: 1,
+      id: "grocery-1", 
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F1%2FApples.jpg&w=3840&q=75",
       itemname: "Apples",
@@ -21,7 +21,7 @@ const Products = () => {
       seller: "Grocery Bazar",
     },
     {
-      id: 2,
+      id: "grocery-2",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F2%2FBabySpinach.jpg&w=3840&q=75",
       itemname: "Baby Spinach",
@@ -34,7 +34,7 @@ const Products = () => {
       seller: "Fresh Greens",
     },
     {
-      id: 3,
+      id: "grocery-3",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F3%2Fblueberries.jpg&w=3840&q=75",
       itemname: "Blueberries",
@@ -47,7 +47,7 @@ const Products = () => {
       seller: "Berry Farm",
     },
     {
-      id: 4,
+      id: "grocery-4",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F4%2FBrusselsSprouts.jpg&w=3840&q=75",
       itemname: "Brussels Sprouts",
@@ -60,7 +60,7 @@ const Products = () => {
       seller: "Green Valley",
     },
     {
-      id: 5,
+      id: "grocery-5",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F5%2FCelerySticks.jpg&w=3840&q=75",
       itemname: "celery sticks",
@@ -77,35 +77,11 @@ const Products = () => {
   const handleProductClick = (product) => {
     setselectproduct(product);
   };
+  
   const handleclosemodal = () => {
     setselectproduct(null);
   };
 
-  const addToCart = (product) => {
-    setcartItems((prevItems) => {
-      const existingItem = prevItems.find((item) => item.id === product.id);
-      if (existingItem) {
-        return prevItems.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
-      } else {
-        return [...prevItems, { ...product, quantity: 1 }];
-      }
-    });
-  };
-const removeFromCart=(id)=>{
-  setcartItems((prevItems)=> prevItems.filter((item)=>item.id!==id))
-}
-const updateQuantity=(id,quantity)=>{
-  if (quantity<=0) {
-    removeFromCart(id)
-  }else{
-    setcartItems((prevItems)=>
-    prevItems.map((item)=>(item.id===id?{...item,quantity}:item)))
-  }
-}
   useEffect(() => {
     if (selectproduct) {
       document.body.style.overflow = "hidden";
@@ -116,34 +92,33 @@ const updateQuantity=(id,quantity)=>{
       document.body.style.overflow = "auto";
     };
   }, [selectproduct]);
+  
   return (
     <>
-    <Cart
-    cartItems={cartItems}
-    removeFromCart={removeFromCart}
-    updateQuantity={updateQuantity}/>
-   
-    <div className="bg-gray-100 p-6 ">
-      <div className="flex flex-wrap gap-4">
-        {products.map((product) => (
-          <Productfun
-            key={product.id}
-            id={product.id}
-            imageurl={product.imageurl}
-            itemname={product.itemname}
-            weight={product.weight}
-            price={product.price}
-            onproductclick={() => handleProductClick(product)}
+      <div className="bg-gray-100 p-6 ">
+        <div className="flex flex-wrap gap-4">
+          {products.map((product) => (
+            <Productfun
+              key={product.id}
+              id={product.id}
+              imageurl={product.imageurl}
+              itemname={product.itemname}
+              weight={product.weight}
+              price={product.price}
+              onproductclick={() => handleProductClick(product)}
+            />
+          ))}
+        </div>
+        {selectproduct && (
+          <Groceryproductpop 
+            product={selectproduct} 
+            onclose={handleclosemodal} 
+            addToCart={addToCart} 
           />
-        ))}
+        )}
       </div>
-      {selectproduct && (
-        <Groceryproductpop product={selectproduct} onclose={handleclosemodal} addToCart={addToCart} />
-      )}
-    </div>
     </>
   );
-
 };
 
 export default Products;

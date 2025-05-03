@@ -16,16 +16,16 @@ import { useNavigate } from "react-router-dom";
 const Option = () => {
   const navigate = useNavigate();
   const options = [
-    { label: "Clothing", icon: <GiAmpleDress /> , path: "/clothing" },
-    { label: "Grocery", icon: <GiShoppingCart /> , path: "/grocery" },
-    { label: "Bakery", icon: <GiCakeSlice /> },
-    { label: "Makeup", icon: <GiLipstick /> },
-    { label: "Bags", icon: <GiHandBag /> },
-    { label: "Furniture", icon: <GiTable /> },
-    { label: "Daily Needs", icon: <GiGears /> },
-    { label: "Books", icon: <GiBookshelf /> },
-    { label: "Gadget", icon: <GiGears /> },
-    { label: "Medicine", icon: <GiMedicines /> },
+    { label: "Clothing", icon: <GiAmpleDress />, path: "/clothing" },
+    { label: "Grocery", icon: <GiShoppingCart />, path: "/grocery" },
+    { label: "Bakery", icon: <GiCakeSlice />, path: "/bakery" },
+    { label: "Makeup", icon: <GiLipstick />, path: "/makeup" },
+    { label: "Bags", icon: <GiHandBag />, path: "/bags" },
+    { label: "Furniture", icon: <GiTable />, path: "/furniture" },
+    { label: "Daily Needs", icon: <GiGears /> , path:"/dailyneeds"},
+    { label: "Books", icon: <GiBookshelf /> ,path:"/books"},
+    { label: "Gadget", icon: <GiGears />,path:"/gadget" },
+    { label: "Medicine", icon: <GiMedicines /> ,path:"/medicine"},
   ];
 
   const [isOpen, setIsOpen] = useState(false);

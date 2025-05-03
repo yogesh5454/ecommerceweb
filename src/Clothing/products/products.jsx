@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import Productsfun from "./productfun";
 import Productpop from "./productspop";
-import Cart from "../../cart/cart";
+import { useCart } from "../../context/CartContext";
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [cartItems, setCartItems] = useState([]);
+  const { addToCart } = useCart();
 
   const products = [
     {
-      id: 1,
+      id: " clothing-1",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F112%2Fmango.jpg&w=3840&q=75",
       itemname: "Mango Self Striped A Line Dress",
@@ -20,7 +20,7 @@ const Products = () => {
       seller: "Pick Bazar",
     },
     {
-      id: 2,
+      id: "clothing-2",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F115%2FFOREVER_21.jpg&w=3840&q=75",
       itemname: "Forever 21 Solid Bodycon Midi Dress",
@@ -32,7 +32,7 @@ const Products = () => {
       seller: "Clothing Shop",
     },
     {
-      id: 3,
+      id: "clothing-3",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F116%2FDOROTHY_PERKINS.jpg&w=3840&q=75",
       itemname: "Dorothy Perkins Self Striped A Line Dress",
@@ -44,7 +44,7 @@ const Products = () => {
       seller: "Pick Bazar",
     },
     {
-      id: 4,
+      id: "clothing-4",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F117%2FFold_over.jpg&w=3840&q=75",
       itemname: "Fold Over Collar Plain Blazers",
@@ -56,7 +56,7 @@ const Products = () => {
       seller: "Clothing Shop",
     },
     {
-      id: 5,
+      id: "clothing-5",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F119%2FSolid_Notch.jpg&w=3840&q=75",
       itemname: "Solid Notch Lapel Single Button Long Sleeve Blazer",
@@ -68,7 +68,7 @@ const Products = () => {
       seller: "Pick Bazar",
     },
     {
-      id: 6,
+      id: "clothing-6",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F120%2FNotch_Lapel.jpg&w=3840&q=75",
       itemname: "Notch Lapel Single Button Color Block Blazer",
@@ -80,7 +80,7 @@ const Products = () => {
       seller: "Pick Bazar",
     },
     {
-      id: 7,
+      id: "clothing-7",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F121%2FNarrow_Notch.jpg&w=3840&q=75",
       itemname: "Narrow Notch Lapel Slit Pocket Plain Blazers",
@@ -92,7 +92,7 @@ const Products = () => {
       seller: "Kapada Pasal",
     },
     {
-      id: 8,
+      id: "clothing-8",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F122%2FNotch_Lapel_Elastic.jpg&w=3840&q=75",
       itemname: "Notch Lapel Elastic Waist Plain Trench Coat",
@@ -104,7 +104,7 @@ const Products = () => {
       seller: "Pick Bazar",
     },
     {
-      id: 9,
+      id: "clothing-9",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F123%2FTurn_Down.jpg&w=3840&q=75",
       itemname: "Turn Down Collar Elastic Waist Plain Trench Coat",
@@ -115,7 +115,7 @@ const Products = () => {
       categories: ["Clothing", "Outer Wear", "Waist coat"],
     },
     {
-      id: 10,
+      id: "clothing-10",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F124%2FCowl_Neck.jpg&w=3840&q=75",
       itemname: "Cowl Neck Kangaroo Pocket Color Block Hoodie",
@@ -127,7 +127,7 @@ const Products = () => {
       seller: "Pick Bazar",
     },
     {
-      id: 11,
+      id: "clothing-11",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F126%2FHooded_Zips.jpg&w=3840&q=75",
       itemname: "Hooded Zips Plain Long Sleeve Hoodies",
@@ -139,7 +139,7 @@ const Products = () => {
       seller: "Pick Bazar",
     },
     {
-      id: 12,
+      id: "clothing-12",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F127%2FLapel_Zips.jpg&w=3840&q=75",
       itemname: "Lapel Zips Plain Long Sleeve Jackets",
@@ -151,7 +151,7 @@ const Products = () => {
       seller: "Pick Bazar",
     },
     {
-      id: 13,
+      id: "clothing-13",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F130%2FBOXY_CARDIGAN.jpg&w=1080&q=75",
       itemname: "Boxy Cardigan",
@@ -163,7 +163,7 @@ const Products = () => {
       seller: "Pick Bazar",
     },
     {
-      id: 14,
+      id: "clothing-14",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F132%2FSTRETCH_COTTON.jpg&w=3840&q=75",
       itemname: "Stretch Cotton Utility Jacket With Adjustable Waist",
@@ -175,7 +175,7 @@ const Products = () => {
       seller: "cloth Bazar",
     },
     {
-      id: 15,
+      id: "clothing-15",
       imageurl:
         "https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F134%2FDavid_Jones.jpg&w=1080&q=75",
       itemname: "David Jones",
@@ -196,35 +196,6 @@ const Products = () => {
     setSelectedProduct(null);
   };
 
-  const addToCart = (product) => {
-    setCartItems((prevItems) => {
-      const existingItem = prevItems.find((item) => item.id === product.id);
-      if (existingItem) {
-        return prevItems.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
-      } else {
-        return [...prevItems, { ...product, quantity: 1 }];
-      }
-    });
-  };
-
-  const removeFromCart = (id) => {
-    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
-  };
-
-  const updateQuantity = (id, quantity) => {
-    if (quantity <= 0) {
-      removeFromCart(id);
-    } else {
-      setCartItems((prevItems) =>
-        prevItems.map((item) => (item.id === id ? { ...item, quantity } : item))
-      );
-    }
-  };
-
   useEffect(() => {
     if (selectedProduct) {
       document.body.style.overflow = "hidden";
@@ -238,11 +209,6 @@ const Products = () => {
 
   return (
     <>
-      <Cart
-        cartItems={cartItems}
-        removeFromCart={removeFromCart}
-        updateQuantity={updateQuantity}
-      />
       <div className="bg-gray-100 p-6">
         <div className="flex flex-wrap gap-3">
           {products.map((product) => (

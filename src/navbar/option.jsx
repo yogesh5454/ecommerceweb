@@ -17,11 +17,12 @@ const Option = () => {
   const navigate = useNavigate();
   const options = [
     { label: "Clothing", icon: <GiAmpleDress />, path: "/clothing" },
+    { label: "Furniture", icon: <GiTable />, path: "/furniture" },
     { label: "Grocery", icon: <GiShoppingCart />, path: "/grocery" },
     { label: "Bakery", icon: <GiCakeSlice />, path: "/bakery" },
     { label: "Makeup", icon: <GiLipstick />, path: "/makeup" },
     { label: "Bags", icon: <GiHandBag />, path: "/bags" },
-    { label: "Furniture", icon: <GiTable />, path: "/furniture" },
+   
     { label: "Daily Needs", icon: <GiGears /> , path:"/dailyneeds"},
     { label: "Books", icon: <GiBookshelf /> ,path:"/books"},
     { label: "Gadget", icon: <GiGears />,path:"/gadget" },
@@ -44,7 +45,7 @@ const Option = () => {
       <button
         onClick={toggleDropdown}
         
-        className=" border border-white bg-white text-green-600 flex items-center justify-between p-2 shadow-sm px-4 rounded-sm gap-3"
+        className=" border border-white bg-white text-green-600 flex items-center justify-between p-2 shadow-sm px-4 rounded-sm gap-3 cursor-pointer"
       >
         <div className="flex items-center gap-2">
           {selected.icon}

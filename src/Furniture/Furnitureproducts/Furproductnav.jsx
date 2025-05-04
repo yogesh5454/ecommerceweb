@@ -11,6 +11,7 @@ const Furproduct = ({ products = [
   { icon: <MdTableBar  />, proname: "Table" },
 ] }) => {
   return (
+    
     <div className="flex flex-wrap w-90 pt-30 gap-5 p-6">
       {products.map((product, index) => (
         <div

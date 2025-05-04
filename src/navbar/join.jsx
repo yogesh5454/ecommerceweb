@@ -18,7 +18,7 @@ const Join = () => {
     <div>
       <button
         onClick={() => setlogopen(true)}
-        className="text-white bg-green-700 p-2 mr-4 rounded-md w-15"
+        className="text-white bg-green-700 p-2 mr-4 rounded-md w-15 cursor-pointer"
       >
         Join
       </button>

@@ -29,7 +29,7 @@ const Cart = () => {
         onMouseMove={(e) => e.preventDefault()}
         onWheel={(e) => e.preventDefault()}
         onTouchMove={(e) => e.preventDefault()}
-        className="text-white bg-green-700 fixed p-3 top-4 right-0 mt-100 rounded-sm z-30"
+        className="text-white bg-green-700 fixed p-3 top-4 right-0 mt-100 rounded-sm z-30 cursor-pointer"
       >
         <div className="flex gap-2 items-center">
           <BsFillCartCheckFill />

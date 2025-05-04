@@ -27,7 +27,7 @@ const Pagedrop = () => {
       <button
         onClick={showDrop}
         onMouseEnter={showDrop}
-        className="flex gap-1 items-center "
+        className="flex gap-1 items-center cursor-pointer"
       >
         Pages <FaChevronDown className="mt-1" />
       </button>

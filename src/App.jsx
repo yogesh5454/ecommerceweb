@@ -13,7 +13,7 @@ import Gadget from "./Gadget/Gadget";
 import Medicine from "./Medicine/Medicine";
 import Bags from "./Bags/Bags";
 import Makeup from "./Makeup/Makeup";
-import { CartProvider } from "./context/CartContext.jsx";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (

@@ -1,11 +1,11 @@
 import React from 'react'
-
+import Bookhead from './Bookhead'
+import Booksproduct from './Booksproducts/Booksproduct'
 const Books = () => {
   return (
     <div>
-       <div className='items-center font-extrabold text-9xl text-green-700 p-100'>
-      <h1>This page is building</h1>
-    </div>
+   <Bookhead/>
+   <Booksproduct/>
     </div>
   )
 }

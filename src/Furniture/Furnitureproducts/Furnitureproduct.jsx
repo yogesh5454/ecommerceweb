@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Furnitureprofun from "./Furnitureprofun";
 import Furnitureproductpop from "./Furnitureproductpop";
+import { useCart } from "../../context/CartContext";
 const Furnitureproduct = () => {
   const [selectproduct, setselectproduct] = useState(null);
+  const {addToCart}=useCart();
   const products = [
     {
       id: "furniture-1",
@@ -74,7 +76,16 @@ const Furnitureproduct = () => {
       price: "$150",
       categories: ["chair", "living room"],
       seller: "Furniture World",
+    },{
+      id:"furniture-7",
+      imageurl:"https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F459%2FCastlery_2Seater.png&w=3840&q=75",
+      itemname:"Castlery Double Sofa",
+      description:"This is a double sofa made of solid hardwood, featuring a classic design and sturdy construction. It comes with a comfortable mattress and is perfect for any bedroom.",
+      price:"$620",
+      categories:["sofa","double sofa"],
+      seller:"furniture shop"
     },
+
   ];
 
   const handleproductclick = (product) => {
@@ -88,22 +99,21 @@ const Furnitureproduct = () => {
     <div className="py-6 px-4">
       <div className="flex gap-4 flex-wrap">
         {products.map((product, id) => (
-         
-            <Furnitureprofun
-              key={product.id}
-              id={product.id}
-              imageurl={product.imageurl}
-              itemname={product.itemname}
-              price={product.price}
-              onproductclick={() => handleproductclick(product)}
-            />
-       
+          <Furnitureprofun
+            key={product.id}
+            id={product.id}
+            imageurl={product.imageurl}
+            itemname={product.itemname}
+            price={product.price}
+            onproductclick={() => handleproductclick(product)}
+          />
         ))}
       </div>
       {selectproduct && (
         <Furnitureproductpop
           product={selectproduct}
           onclose={handleclosemodal}
+          addToCart={addToCart}
         />
       )}
     </div>

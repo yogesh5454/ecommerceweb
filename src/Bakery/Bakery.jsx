@@ -1,11 +1,11 @@
-import React from 'react'
-
+import React from "react";
+import Bakeryhead from "./Bakeryhead";
 const Bakery = () => {
   return (
-    <div className='items-center font-extrabold text-9xl text-green-700 p-100'>
-      <h1>This page is Bakery</h1>
+    <div>
+      <Bakeryhead />
     </div>
-  )
-}
+  );
+};
 
-export default Bakery
+export default Bakery;

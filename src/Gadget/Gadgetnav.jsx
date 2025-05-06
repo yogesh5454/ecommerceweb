@@ -35,11 +35,11 @@ const Gadgetnav = () => {
         }
     ]
   return (
-    <div className="flex flex-wrap w-80 pt-30 gap-5 p-6 ">
+    <div className="flex flex-wrap w-90 pt-30 gap-5 p-3 ">
     {navlist.map((list, index) => (
       <div
         key={index}
-        className="flex flex-col w-30 items-center py-2  shadow-lg  rounded-lg bg-white hover:scale-105 transition-transform duration-200 cursor-pointer"
+        className="flex flex-col w-38 items-center py-2  shadow-lg  rounded-lg bg-white hover:scale-105 transition-transform duration-200 cursor-pointer"
       >
        <img className='w-full' src={list.imageurl} alt={list.itemname} />
         <span className="mt-2 text-lg  text-gray-800 capitalize">

@@ -4,8 +4,8 @@ import { FaArrowRight } from "react-icons/fa6";
 const Gadgethead = () => {
   return (
     <div >
-      <div className="py-15 mx-4 bg-teal-200 px-35 mt-30 rounded-sm h-100 shadow-2xl  w-330 flex justify-between ">
-        <div>
+      <div className="py-15 mr-4 bg-teal-200 px-35 mt-30 rounded-sm h-100 shadow-2xl  w-330 flex justify-between ">
+        <div >
           <h2 className="text-4xl font-semibold">
             Exclusive soundbars <br /> made only for you
           </h2>
@@ -16,9 +16,9 @@ const Gadgethead = () => {
       <span>Order now</span>    <FaArrowRight/>
           </button>
         </div>
-        {/* <div>
-         <img src="https://img.freepik.com/premium-vector/drawing-speaker-that-has-yellow-black-it_1230457-48636.jpg?semt=ais_hybrid&w=740" alt="Soundbox Image" />
-        </div> */}
+        <div>
+         <img className="object-contain h-full w-full" src="https://img.freepik.com/premium-vector/drawing-speaker-that-has-yellow-black-it_1230457-48636.jpg?semt=ais_hybrid&w=740" alt="Soundbox Image" />
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import "./App.css";
+
 
 import Nav from "./navbar/nav";
 import Clothing from "./Clothing/Clothing";

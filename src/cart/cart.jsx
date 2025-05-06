@@ -71,11 +71,11 @@ const Cart = () => {
                   
                   <div key={item.id} className="flex items-center gap-2 mb-4">
                     <div className="flex-col space-y-3 bg-gray-300 p-1 px-2 rounded-t-4xl rounded-b-4xl">
-                      <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>
+                      <button className="cursor-pointer" onClick={() => updateQuantity(item.id, item.quantity + 1)}>
                         <p>+</p>
                       </button>
                       <p>{item.quantity}</p>
-                      <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>
+                      <button className="cursor-pointer" onClick={() => updateQuantity(item.id, item.quantity - 1)}>
                         <p>-</p>
                       </button>
                     </div>

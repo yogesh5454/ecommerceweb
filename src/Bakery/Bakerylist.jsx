@@ -132,14 +132,14 @@ const Bakerylist = () => {
     <div className="relative">
       <button
         onClick={scrollLeft}
-        className="absolute left-0 top-1/2 z-10 bg-white p-3 shadow-2xl  rounded-4xl"
+        className="absolute left-0 top-1/2 z-10 bg-white p-3 shadow-2xl ml-3 rounded-4xl"
       >
         <FaChevronLeft />
 
       </button>
       <button
         onClick={scrollRight}
-        className="absolute right-0 top-1/2 z-10 bg-white p-3 rounded-4xl shadow-2xl "
+        className="absolute right-0 top-1/2 z-10 bg-white p-3 rounded-4xl shadow-2xl mr-3 "
       >
         <FaAngleRight />
 
@@ -147,7 +147,7 @@ const Bakerylist = () => {
 
       <div
         id="scroll-container"
-        className="flex bg-gray-300 p-6 gap-3  overflow-x-auto overflow-y-hidden cursor-grab select-none"
+        className="flex bg-gray-200 p-6 gap-3  overflow-x-auto overflow-y-hidden cursor-grab select-none"
         style={{
         
           msOverflowStyle: "none", 

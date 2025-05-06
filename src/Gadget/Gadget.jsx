@@ -1,11 +1,12 @@
 import React from 'react'
+import Gadgetnav from './Gadgetnav'
+import Gadgethead from './Gadgethead'
 
 const Gadget = () => {
   return (
-    <div>
-       <div className='items-center font-extrabold text-9xl text-green-700 p-100'>
-      <h1>This page is building</h1>
-    </div>
+    <div className='flex bg-gray-200'>
+      <div><Gadgetnav/></div>
+      <div><Gadgethead/></div>
     </div>
   )
 }

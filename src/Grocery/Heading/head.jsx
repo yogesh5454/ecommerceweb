@@ -3,7 +3,7 @@ import React from "react";
 const Head = () => {
   return (
     <div>
-      <div className=" min-h-screen bg-gray-50 flex flex-col items-center justify-center">
+      <div className=" min-h-screen bg-gray-50 flex flex-col items-center justify-center  bg-[url('https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F904%2Fgrocery.png&w=3840&q=75')]">
         <h1 className="text-6xl font-bold p-5">Groceries Delivered in 90 Minute</h1>
         <p className="text-2xl p-3">
         Get your healthy foods & snacks delivered at your doorsteps all day everyday

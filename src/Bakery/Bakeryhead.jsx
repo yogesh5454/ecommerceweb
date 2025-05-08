@@ -3,7 +3,7 @@ import { CiSearch } from "react-icons/ci";
 
 const Bakeryhead = () => {
   return (
-    <div className=" h-150 bg-gray-50 flex flex-col items-center justify-center">
+    <div className=" h-150  flex flex-col items-center justify-center bg-no-repeat bg-center bg-contain bg-[url('https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F905%2Fbakery.jpg&w=3840&q=75')]">
       <h1 className="text-6xl font-bold p-5">
         Get Your Bakery Items Delivered
       </h1>
@@ -23,7 +23,7 @@ const Bakeryhead = () => {
         </button>
       </div>
 
-      <div className="flex justify-between w-full max-w-7xl mx-auto mt-8"></div>
+
     </div>
   );
 };

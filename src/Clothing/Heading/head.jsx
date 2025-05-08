@@ -3,7 +3,10 @@ import { CiSearch } from "react-icons/ci";
 const Head = () => {
   return (
     <>
-      <div className=" min-h-screen bg-gray-50 flex flex-col items-center justify-center">
+      <div
+        className=" min-h-screen bg-gray-50 flex flex-col items-center justify-center bg-no-repeat bg-center bg-contain
+        bg-[url('https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F908%2Fcloths.png&w=3840&q=75')]"
+      >
         <h1 className="text-6xl font-bold p-5">Shop your designer dresses</h1>
         <p className="text-2xl p-3">
           Ready to wear dresses tailored for you online. Hurry up while stock

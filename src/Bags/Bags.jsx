@@ -1,15 +1,17 @@
 import React from 'react'
+import Baghead from './Baghead'
+import Bagoffer from './Bagoffer'
+import Bagproductsnav from './Bagproducts/Bagproductsnav'
 
 const Bags = () => {
   return (
     <div>
-       <div className='items-center font-extrabold text-9xl text-green-700 p-100'>
-      <h1>This page is Makeup</h1>
-      <h2>Stay tuned for updates!</h2>
-      
-      <h3>We appreciate your patience!</h3>
-      <h4>More content coming soon!</h4>
-    </div>
+     <Baghead/>
+     <Bagoffer/>
+
+     <div>
+      <Bagproductsnav/>
+     </div>
     </div>
   )
 }

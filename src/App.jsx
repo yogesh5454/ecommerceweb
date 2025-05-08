@@ -4,7 +4,7 @@ import Nav from "./navbar/nav";
 import Clothing from "./Clothing/Clothing";
 import Cart from "./cart/cart";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Grocery from "./Grocery/Grocery";
+import Grocery from "./Grocery/Grocery"
 import Bakery from "./Bakery/Bakery";
 import Furniture from "./Furniture/Furniture";
 import Dailyneeds from "./Dailyneeds/Dailyneeds";
@@ -33,6 +33,7 @@ function App() {
         <Route path="/books" element={<Books />} />
         <Route path="/gadget" element={<Gadget />} />
         <Route path="/medicine" element={<Medicine />} />
+        
       </Routes>
       </CartProvider>
     </BrowserRouter>

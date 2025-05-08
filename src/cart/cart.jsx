@@ -42,7 +42,7 @@ const Cart = () => {
 
       {cartOpen && (
         <div
-          className="fixed inset-0 z-40"
+          className="fixed inset-0 z-60"
           onClick={() => setCartOpen(false)}
         >
           <div

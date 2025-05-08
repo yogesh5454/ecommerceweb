@@ -7,7 +7,7 @@ import Join from "./join";
 const Nav = () => {
   return (
     <>
-      <div className="flex py-5 bg-gray-50  w-full fixed ">
+      <div className="flex py-5 bg-gray-50 z-50  w-full fixed ">
         <div className=" ml-8  flex w-1/2 gap-7 items-center">
           <img
             className="w-35 "

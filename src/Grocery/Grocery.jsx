@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "./Heading/head";
 import Productnav from "./products/Productnav";
-import Products from "./products/products";
+import Products from "./products/Products";
 const Grocery = () => {
   return (
     <div>

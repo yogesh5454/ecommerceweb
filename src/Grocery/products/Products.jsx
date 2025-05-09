@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Productfun from "./productfun";
+import Productfun from "./Productfun";
 import Groceryproductpop from "./Groceryproductpop";
 import { useCart } from "../../context/CartContext";
 const Products = () => {

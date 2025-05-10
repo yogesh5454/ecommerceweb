@@ -1,23 +1,18 @@
-import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import Categories from './Categories/Categories';
-import Vegetables from './Categories/Vegetables/Vegetables';
-import Snacks from './Categories/Snacks/Snacks';
-import RicePulse from './Categories/RicePulse/RicePulse';
-import Meat from './Categories/Meat/Meat';
-import Fruits from './Categories/Fruits.jsx/Fruits';
-import Fish from './Categories/Fish/Fish';
-import DairyEggs from './Categories/DairyEggs/DairyEggs';
-import Bakery from './Categories/Bakery/Bakery';
+import React from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Categories from "./Categories/Categories";
+import Vegetables from "./Categories/Vegetables/Vegetables";
+import Snacks from "./Categories/Snacks/Snacks";
+import RicePulse from "./Categories/RicePulse/RicePulse";
+import Meat from "./Categories/Meat/Meat";
+import Fruits from "./Categories/Fruits.jsx/Fruits";
+import Fish from "./Categories/Fish/Fish";
+import DairyEggs from "./Categories/DairyEggs/DairyEggs";
+import Bakery from "./Categories/Bakery/Bakery";
 
 const Dailyneeds = () => {
-  const location = useLocation();
-  const isRootPath = location.pathname === '/dailyneeds' || location.pathname === '/dailyneeds/';
-
   return (
     <div>
-  
-      {isRootPath && <Categories />}
       
       <Routes>
         <Route index element={<Categories />} />

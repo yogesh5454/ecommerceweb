@@ -11,9 +11,9 @@ const Productsfun = ({ id, imageurl, itemname, price, onproductclick }) => {
         />
       </div>
       <div className="mt-4">
-        <p className="text-md font-light px-5">{itemname}</p>
+        <p className=" text-gray-600 px-5">{itemname}</p>
       </div>
-      <div className="my-2 flex gap-20 justify-center items-center">
+      <div className="my-2 flex gap-20 justify-between px-5 items-center">
         <h2 className="font-semibold">{price}</h2>
         <button
           onClick={onproductclick}

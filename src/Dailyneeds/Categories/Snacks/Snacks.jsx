@@ -1,11 +1,10 @@
 import React from 'react'
+import Snacksproducts from './Snacksproducts/Snacksproducts'
 
 const Snacks = () => {
   return (
     <div>
-        <div className='pt-40'>
-      <h1>This is veg</h1>
-    </div>
+       <Snacksproducts/>
     </div>
   )
 }

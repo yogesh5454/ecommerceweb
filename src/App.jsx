@@ -14,6 +14,7 @@ import Medicine from "./Medicine/Medicine";
 import Bags from "./Bags/Bags";
 import Makeup from "./Makeup/Makeup";
 import { CartProvider } from "./context/CartContext";
+import Footer from "./Footer/Footer";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/medicine" element={<Medicine />} />
         
       </Routes>
+      <Footer/>
       </CartProvider>
     </BrowserRouter>
   );
